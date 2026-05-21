@@ -1,0 +1,12 @@
+# Agent Compatibility
+
+## Shared assumptions
+- Agent can read files
+- Agent can run shell commands
+- Agent can report command output back to the user
+
+## Claude
+Use the skill by loading `SKILL.md` and running the documented shell command.
+
+## Codex CLI
+Use the skill by loading `SKILL.md` and running the documented shell command.
