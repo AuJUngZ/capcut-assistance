@@ -3,7 +3,7 @@
 Install with:
 
 ```bash
-npx skills add <owner>/<repo> --skill dead-air-removal
+npx skills add AuJUngZ/capcut-assistance --skill dead-air-removal
 ```
 
 Use this skill from the repository checkout that contains `scripts/workflow.py`.

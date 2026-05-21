@@ -5,7 +5,7 @@
 Install the public skill with:
 
 ```bash
-npx skills add <owner>/<repo> --skill dead-air-removal
+npx skills add AuJUngZ/capcut-assistance --skill dead-air-removal
 
 The installable skill file lives at `skills/dead-air-removal/SKILL.md`.
 

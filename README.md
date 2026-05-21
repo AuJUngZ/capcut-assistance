@@ -7,7 +7,7 @@ Portable CapCut skills for agent CLIs that support the shared `SKILL.md` format.
 Install the first public skill with:
 
 ```bash
-npx skills add <owner>/<repo> --skill dead-air-removal
+npx skills add AuJUngZ/capcut-assistance --skill dead-air-removal
 ```
 
 ## Available Skills
