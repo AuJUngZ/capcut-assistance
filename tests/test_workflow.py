@@ -16,3 +16,14 @@ def test_build_backup_path_uses_timestamp_suffix():
     backup = build_backup_path(Path("draft_content.json"), "20260521T090000Z")
 
     assert backup.name == "draft_content.json.bak.20260521T090000Z"
+
+
+def test_skill_doc_mentions_backup_validation_and_report():
+    text = Path("C:/Coding/capcut-skills/.worktrees/capcut-dead-air-portable/SKILL.md").read_text(
+        encoding="utf-8"
+    )
+
+    assert "backup" in text.lower()
+    assert "validate" in text.lower()
+    assert "report" in text.lower()
+    assert "heavily edited" in text.lower()
