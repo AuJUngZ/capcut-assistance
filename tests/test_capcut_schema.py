@@ -24,3 +24,14 @@ def test_resolve_video_segments_maps_materials_to_source_ranges():
     assert segments[0].material_path.endswith("clip-a.mp4")
     assert segments[0].source_start_us == 0
     assert segments[0].source_duration_us == 8_000_000
+
+
+def test_resolve_video_segments_falls_back_to_draft_content_tracks():
+    bundle = load_draft_bundle(SAMPLE_DRAFT)
+    bundle.draft_content["tracks"] = bundle.project["tracks"]
+    bundle.project = {"main_timeline_id": "timeline-only"}
+
+    segments = resolve_video_segments(bundle)
+
+    assert len(segments) == 2
+    assert segments[1].material_path.endswith("clip-b.mp4")

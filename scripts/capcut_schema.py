@@ -24,6 +24,14 @@ class VideoSegment:
     raw_segment: dict
 
 
+def get_track_container(bundle: DraftBundle) -> dict:
+    if "tracks" in bundle.draft_content:
+        return bundle.draft_content
+    if "tracks" in bundle.project:
+        return bundle.project
+    raise KeyError("tracks")
+
+
 def load_draft_bundle(root: Path) -> DraftBundle:
     draft_content_path = root / "draft_content.json"
     project_path = root / "Timelines" / "project.json"
@@ -42,7 +50,8 @@ def resolve_video_segments(bundle: DraftBundle) -> list[VideoSegment]:
         for item in bundle.draft_content["materials"]["videos"]
     }
     segments: list[VideoSegment] = []
-    for track in bundle.project["tracks"]:
+    track_container = get_track_container(bundle)
+    for track in track_container["tracks"]:
         if track.get("type") != "video":
             continue
         for segment in track.get("segments", []):
