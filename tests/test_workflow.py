@@ -8,7 +8,7 @@ from scripts.detect_dead_air import KeepRange
 def test_skill_bundle_contains_portable_entrypoints():
     root = Path(__file__).resolve().parents[1]
 
-    assert (root / "skills" / "capcut-assistance" / "SKILL.md").exists()
+    assert (root / "skills" / "dead-air-removal" / "SKILL.md").exists()
     assert (root / "docs" / "agent-compatibility.md").exists()
     assert (root / "scripts" / "workflow.py").exists()
     assert (root / "scripts" / "capcut_schema.py").exists()
@@ -33,7 +33,7 @@ def test_generate_timestamp_uses_utc_style_format():
 
 def test_skill_doc_mentions_backup_validation_and_report():
     root = Path(__file__).resolve().parents[1]
-    text = (root / "skills" / "capcut-assistance" / "SKILL.md").read_text(encoding="utf-8")
+    text = (root / "skills" / "dead-air-removal" / "SKILL.md").read_text(encoding="utf-8")
 
     assert "backup" in text.lower()
     assert "validation" in text.lower()

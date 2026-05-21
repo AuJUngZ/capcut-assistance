@@ -1,9 +1,9 @@
 ---
-name: capcut-assistance
+name: dead-air-removal
 description: Use when a CapCut draft already exists and an agent should safely remove dead air, preserve backups, and report timeline edits through shell commands.
 ---
 
-# CapCut Assistance
+# Dead Air Removal
 
 ## When to Use
 - A CapCut draft folder already exists

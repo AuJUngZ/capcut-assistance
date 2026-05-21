@@ -7,16 +7,16 @@ Portable CapCut skills for agent CLIs that support the shared `SKILL.md` format.
 Install the first public skill with:
 
 ```bash
-npx skills add <owner>/<repo> --skill capcut-assistance
+npx skills add <owner>/<repo> --skill dead-air-removal
 ```
 
 ## Available Skills
 
-- `capcut-assistance`: safely remove dead air from an existing CapCut draft, preserve backups, and write edit reports
+- `dead-air-removal`: safely remove dead air from an existing CapCut draft, preserve backups, and write edit reports
 
 ## Skill Location
 
-The installable skill lives at `skills/capcut-assistance/SKILL.md`.
+The installable skill lives at `skills/dead-air-removal/SKILL.md`.
 
 ## Runtime Requirements
 
