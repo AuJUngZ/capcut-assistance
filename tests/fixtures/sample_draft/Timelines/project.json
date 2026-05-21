@@ -1,0 +1,33 @@
+{
+  "tracks": [
+    {
+      "type": "video",
+      "segments": [
+        {
+          "id": "seg-1",
+          "material_id": "video-1",
+          "source_timerange": {
+            "start": 0,
+            "duration": 8000000
+          },
+          "target_timerange": {
+            "start": 0,
+            "duration": 8000000
+          }
+        },
+        {
+          "id": "seg-2",
+          "material_id": "video-2",
+          "source_timerange": {
+            "start": 1000000,
+            "duration": 5000000
+          },
+          "target_timerange": {
+            "start": 8000000,
+            "duration": 5000000
+          }
+        }
+      ]
+    }
+  ]
+}

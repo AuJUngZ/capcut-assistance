@@ -6,6 +6,7 @@ from pathlib import Path
 
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
+    sys.path.insert(0, str(root))
     sys.path.insert(0, str(root / ".vendor"))
 
     try:

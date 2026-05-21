@@ -1,0 +1,16 @@
+{
+  "materials": {
+    "videos": [
+      {
+        "id": "video-1",
+        "path": "C:/media/clip-a.mp4",
+        "duration": 12000000
+      },
+      {
+        "id": "video-2",
+        "path": "C:/media/clip-b.mp4",
+        "duration": 10000000
+      }
+    ]
+  }
+}
