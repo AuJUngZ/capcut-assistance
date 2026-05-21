@@ -17,12 +17,12 @@ class KeepRange:
 
 @dataclass(slots=True, frozen=True)
 class DetectionSettings:
-    silence_threshold_db: float = -35.0
-    min_silence_ms: int = 250
-    lead_padding_ms: int = 120
-    tail_padding_ms: int = 180
-    min_keep_ms: int = 300
-    max_gap_ms: int = 120
+    silence_threshold_db: float = -28.0
+    min_silence_ms: int = 150
+    lead_padding_ms: int = 60
+    tail_padding_ms: int = 90
+    min_keep_ms: int = 250
+    max_gap_ms: int = 40
     ffmpeg_bin: str = "ffmpeg"
 
 

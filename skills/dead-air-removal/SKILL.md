@@ -19,8 +19,8 @@ description: Use when a CapCut draft already exists and an agent should safely r
 ## Default Command
 Run `python -m scripts.workflow --draft-folder "<draft-folder>"` from the `skills/dead-air-removal/` directory (repo checkout) or the skill install directory.
 
-## More Aggressive Silence Removal
-Run `python -m scripts.workflow --draft-folder "<draft-folder>" --silence-threshold-db -28 --min-silence-ms 150 --lead-padding-ms 60 --tail-padding-ms 90 --max-gap-ms 40 --min-keep-ms 250` from the same directory.
+## Gentler Silence Removal (less aggressive)
+Run `python -m scripts.workflow --draft-folder "<draft-folder>" --silence-threshold-db -35 --min-silence-ms 250 --lead-padding-ms 120 --tail-padding-ms 180 --max-gap-ms 120 --min-keep-ms 300` from the same directory.
 
 ## Outputs
 - `dead_air_report.json`
