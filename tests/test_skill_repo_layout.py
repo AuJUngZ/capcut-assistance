@@ -35,3 +35,16 @@ def test_root_readme_documents_runtime_requirements() -> None:
 
 def test_root_skill_file_is_removed() -> None:
     assert not ROOT.joinpath("SKILL.md").exists()
+
+
+def test_compatibility_doc_uses_collection_layout() -> None:
+    text = read_text("docs", "agent-compatibility.md")
+    assert "--skill capcut-assistance" in text
+    assert "skills/capcut-assistance/SKILL.md" in text
+    assert "root-level `SKILL.md`" not in text
+
+
+def test_gitignore_excludes_local_draft_artifacts() -> None:
+    text = read_text(".gitignore")
+    assert "real-drafts/" in text
+    assert "*.bak.*" in text

@@ -1,3 +1,7 @@
 .vendor/
 .pytest_cache/
 __pycache__/
+real-drafts/
+*.bak.*
+dead_air_report.json
+dead_air_report.md

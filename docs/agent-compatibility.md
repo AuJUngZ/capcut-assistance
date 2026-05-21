@@ -1,25 +1,30 @@
 # Agent Compatibility
 
-## Shared assumptions
-- Agent can read files
-- Agent can run shell commands
-- Agent can report command output back to the user
+## Install Surface
 
-## Claude
-Use the skill by loading `SKILL.md` and running the documented shell command.
+Install the public skill with:
 
-## Codex CLI
-Use the skill by loading `SKILL.md` and running the documented shell command.
+```bash
+npx skills add <owner>/<repo> --skill capcut-assistance
+```
 
-## Claude example
-1. Load the skill from `SKILL.md`
-2. Ask the agent to run `python scripts/workflow.py --draft-folder "<draft-folder>"`
-3. Ask the agent to summarize `dead_air_report.md`
+The installable skill file lives at `skills/capcut-assistance/SKILL.md`.
 
-## Codex CLI example
-1. Load the skill from `SKILL.md`
-2. Ask the agent to run `python scripts/workflow.py --draft-folder "<draft-folder>"`
-3. Ask the agent to summarize `dead_air_report.md`
+## Shared Assumptions
 
-## Portability rule
+- The agent can read files
+- The agent can run shell commands
+- Python is available
+- `ffmpeg` is available on `PATH`, or the user can provide `--ffmpeg-bin`
+
+## Portability Rule
+
 Do not rely on UI automation, proprietary slash commands, or agent-only SDK features.
+
+## Execution Contract
+
+Agents should use the shared workflow command:
+
+```bash
+python -m scripts.workflow --draft-folder "<draft-folder>"
+```
