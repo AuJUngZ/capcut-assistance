@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-from scripts.detect_dead_air import KeepRange
+from .detect_dead_air import KeepRange
 
 
 def clone_segment(

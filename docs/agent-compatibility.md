@@ -25,5 +25,5 @@ Do not rely on UI automation, proprietary slash commands, or agent-only SDK feat
 Agents should use the shared workflow command:
 
 ```bash
-python -m scripts.workflow --draft-folder "<draft-folder>"
+python -m skills.dead-air-removal.scripts.workflow --draft-folder "<draft-folder>"
 ```

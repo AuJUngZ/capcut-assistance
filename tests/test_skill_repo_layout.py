@@ -11,12 +11,13 @@ def test_installable_skill_lives_under_skills_directory() -> None:
     text = read_text("skills", "dead-air-removal", "SKILL.md")
     assert "name: dead-air-removal" in text
     assert "python -m scripts.workflow --draft-folder" in text
-    assert "repository checkout that contains `scripts/workflow.py`" in text
+    assert "skill directory that contains `scripts/workflow.py`" in text
 
 
 def test_skill_readme_mentions_repo_layout_contract() -> None:
     text = read_text("skills", "dead-air-removal", "README.md")
-    assert "repository checkout that contains `scripts/workflow.py`" in text
+    assert "scripts/`" in text
+    assert "python -m scripts.workflow" in text
 
 
 def test_root_readme_contains_install_command() -> None:
@@ -30,7 +31,7 @@ def test_root_readme_documents_runtime_requirements() -> None:
     text = read_text("README.md")
     assert "Python" in text
     assert "ffmpeg" in text
-    assert "python -m scripts.workflow --draft-folder" in text
+    assert "python -m skills.dead-air-removal.scripts.workflow --draft-folder" in text
 
 
 def test_root_skill_file_is_removed() -> None:

@@ -6,14 +6,14 @@ from pathlib import Path
 import shutil
 from typing import Callable
 
-from scripts.capcut_schema import get_track_container, load_draft_bundle, resolve_video_segments
-from scripts.detect_dead_air import DetectionSettings, KeepRange, detect_keep_ranges_ffmpeg
-from scripts.patch_capcut_draft import patch_project
-from scripts.validate_capcut_draft import (
+from .capcut_schema import get_track_container, load_draft_bundle, resolve_video_segments
+from .detect_dead_air import DetectionSettings, KeepRange, detect_keep_ranges_ffmpeg
+from .patch_capcut_draft import patch_project
+from .validate_capcut_draft import (
     validate_contiguous_target_ranges,
     validate_material_paths_exist,
 )
-from scripts.write_cut_report import write_json_report, write_markdown_report
+from .write_cut_report import write_json_report, write_markdown_report
 
 
 def build_backup_path(path: Path, stamp: str) -> Path:

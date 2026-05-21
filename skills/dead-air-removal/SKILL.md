@@ -17,10 +17,10 @@ description: Use when a CapCut draft already exists and an agent should safely r
 - Refuse to patch when validation fails or nearly all content would be removed
 
 ## Default Command
-Run `python -m scripts.workflow --draft-folder "<draft-folder>"`
+Run `python -m scripts.workflow --draft-folder "<draft-folder>"` from the `skills/dead-air-removal/` directory (repo checkout) or the skill install directory.
 
 ## More Aggressive Silence Removal
-Run `python -m scripts.workflow --draft-folder "<draft-folder>" --silence-threshold-db -28 --min-silence-ms 150 --lead-padding-ms 60 --tail-padding-ms 90 --max-gap-ms 40 --min-keep-ms 250`
+Run `python -m scripts.workflow --draft-folder "<draft-folder>" --silence-threshold-db -28 --min-silence-ms 150 --lead-padding-ms 60 --tail-padding-ms 90 --max-gap-ms 40 --min-keep-ms 250` from the same directory.
 
 ## Outputs
 - `dead_air_report.json`
@@ -28,7 +28,7 @@ Run `python -m scripts.workflow --draft-folder "<draft-folder>" --silence-thresh
 - timestamped backup files next to the patched draft
 
 ## Requirements
-- Run this from the repository checkout that contains `scripts/workflow.py`
+- Run this from the skill directory that contains `scripts/workflow.py`
 - Python available in the local environment
 - `ffmpeg` available on `PATH`, or pass `--ffmpeg-bin "<path-to-ffmpeg>"`
 - Agent can read files and run shell commands

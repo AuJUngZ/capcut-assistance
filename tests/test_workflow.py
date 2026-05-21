@@ -10,8 +10,8 @@ def test_skill_bundle_contains_portable_entrypoints():
 
     assert (root / "skills" / "dead-air-removal" / "SKILL.md").exists()
     assert (root / "docs" / "agent-compatibility.md").exists()
-    assert (root / "scripts" / "workflow.py").exists()
-    assert (root / "scripts" / "capcut_schema.py").exists()
+    assert (root / "skills" / "dead-air-removal" / "scripts" / "workflow.py").exists()
+    assert (root / "skills" / "dead-air-removal" / "scripts" / "capcut_schema.py").exists()
 
 
 def test_build_backup_path_uses_timestamp_suffix():

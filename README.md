@@ -27,11 +27,11 @@ The installable skill lives at `skills/dead-air-removal/SKILL.md`.
 ## Example Usage
 
 ```bash
-python -m scripts.workflow --draft-folder "<draft-folder>"
+python -m skills.dead-air-removal.scripts.workflow --draft-folder "<draft-folder>"
 ```
 
 More aggressive silence trimming:
 
 ```bash
-python -m scripts.workflow --draft-folder "<draft-folder>" --silence-threshold-db -28 --min-silence-ms 150 --lead-padding-ms 60 --tail-padding-ms 90 --max-gap-ms 40 --min-keep-ms 250
+python -m skills.dead-air-removal.scripts.workflow --draft-folder "<draft-folder>" --silence-threshold-db -28 --min-silence-ms 150 --lead-padding-ms 60 --tail-padding-ms 90 --max-gap-ms 40 --min-keep-ms 250
 ```
