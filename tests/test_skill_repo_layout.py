@@ -19,5 +19,19 @@ def test_skill_readme_mentions_repo_layout_contract() -> None:
     assert "repository checkout that contains `scripts/workflow.py`" in text
 
 
+def test_root_readme_contains_install_command() -> None:
+    text = read_text("README.md")
+    assert "npx skills add" in text
+    assert "--skill capcut-assistance" in text
+    assert "skills/capcut-assistance/SKILL.md" in text
+
+
+def test_root_readme_documents_runtime_requirements() -> None:
+    text = read_text("README.md")
+    assert "Python" in text
+    assert "ffmpeg" in text
+    assert "python -m scripts.workflow --draft-folder" in text
+
+
 def test_root_skill_file_is_removed() -> None:
     assert not ROOT.joinpath("SKILL.md").exists()
