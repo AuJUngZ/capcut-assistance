@@ -27,3 +27,17 @@ def test_skill_doc_mentions_backup_validation_and_report():
     assert "validate" in text.lower()
     assert "report" in text.lower()
     assert "heavily edited" in text.lower()
+
+
+def test_run_workflow_writes_backup_and_reports(tmp_path: Path):
+    from scripts.workflow import run_workflow
+
+    sample_draft = Path("C:/Coding/capcut-skills/.worktrees/capcut-dead-air-portable/tests/fixtures/sample_draft")
+    working_copy = tmp_path / "draft"
+    working_copy.mkdir()
+
+    result = run_workflow(source_draft=sample_draft, working_draft=working_copy)
+
+    assert result.report_json.exists()
+    assert result.report_markdown.exists()
+    assert result.backups
